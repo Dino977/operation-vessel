@@ -3,6 +3,12 @@
   "version": "1.0.2",
   "description": "A vessel for operation items.",
   "main": "./lib/bundle.js",
+  "files": [
+    "lib",
+    "src",
+    "package",
+    "package.json"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack.config.js"
