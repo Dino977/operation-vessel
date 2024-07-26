@@ -1,15 +1,28 @@
 {
   "name": "operation-vessel",
   "version": "1.0.0",
-  "description": "",
+  "description": "A vessel for operation items.",
   "main": "./lib/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack.config.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue",
+    "element",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Dino977/operation-vessel.git"
+  },
+  "homepage": "https://github.com/Dino977/operation-vessel",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "HeyDino",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/preset-env": "^7.24.8",
@@ -20,6 +33,5 @@
     "vue-template-compiler": "^2.7.16",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
-  },
-  "dependencies": {}
+  }
 }
