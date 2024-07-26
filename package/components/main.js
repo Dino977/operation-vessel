@@ -5,13 +5,9 @@ export default {
       type: Number,
       default: 3,
     },
-    trigger: {
-      type: String,
-      default: "hover", // options：hover、click
-    },
     moreTitle: {
       type: String,
-      default: "更多",
+      default: "more",
     },
     moreIconVisible: {
       type: Boolean,
@@ -20,6 +16,10 @@ export default {
     moreIcon: {
       type: String,
       default: "el-icon-arrow-down", // only icons for Element-UI are supported
+    },
+    dropdownAttributes: {
+      type: Object,
+      default: undefined,
     },
     dropdownMenuClass: {
       type: String,
@@ -30,12 +30,15 @@ export default {
     getFilterNodes() {
       return (
         this.$slots.default?.filter((node) => {
-          // The context is undefined, which means the node is hidden
-          if (node.context === undefined) return false;
+          const directives = node.data?.directives;
+          const vShow = directives?.find((item) => item.name === "show");
+          // The node is not displayed when the context is undefined or the v-show directive is false
+          if (node.context === undefined || (vShow && vShow.value === false))
+            return false;
 
           // Determine whether to execute the global filtering method
           if (this.$OPEARATION_VESSEL_FILTER)
-            return this.$OPEARATION_VESSEL_FILTER(node);
+            return this.$OPEARATION_VESSEL_FILTER(node, directives);
 
           return true;
         }) ?? []
@@ -55,7 +58,7 @@ export default {
   render(h) {
     const filterNodes = this.getFilterNodes();
     const filterNodeNum = filterNodes.length;
-    const divider = <el-divider direction="vertical" />;
+    const divider = this.$slots.divider ?? <el-divider direction="vertical" />;
 
     if (filterNodeNum === 0) {
       return;
@@ -87,13 +90,19 @@ export default {
         const moreNodes = filterNodes
           .slice(this.boundary - 1)
           .reduce((result, moreNode) => {
-            result.push(<el-dropdown-item>{moreNode}</el-dropdown-item>);
+            // Synchronous disabled
+            const disabled = moreNode.componentOptions?.propsData?.disabled;
+            result.push(
+              <el-dropdown-item disabled={disabled}>
+                {moreNode}
+              </el-dropdown-item>
+            );
             return result;
           }, []);
 
         result.push(
           divider,
-          <el-dropdown trigger={this.trigger}>
+          <el-dropdown props={this.dropdownAttributes}>
             {moreBtn}
             <el-dropdown-menu
               slot="dropdown"
