@@ -74,7 +74,7 @@ Vue.use(OperationVessel);
 | Attribute          | Description                                                  | Type    | Accepted values                                              | Default            |
 | :----------------- | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- | :----------------- |
 | boundary           | Boundary value of the more button appears                    | number  | ≥2                                                           | 3                  |
-| moreTitle          | Name of the more button                                      | string  | —                                                            | 更多               |
+| moreTitle          | Name of the more button                                      | string  | —                                                            | more               |
 | moreIcon           | Name of the icon to the right of the more button             | string  | [Element-UI icons](https://element.eleme.cn/#/en-US/component/icon) | el-icon-arrow-down |
 | moreIconVisible    | Visibility of the  icon                                      | boolean | —                                                            | false              |
 | dropdownAttributes | Attributes of the [drop-down](https://element.eleme.cn/#/en-US/component/dropdown#dropdown-attributes) | object  | —                                                            | —                  |
@@ -95,7 +95,7 @@ If you use [Custom Directives](https://v2.vuejs.org/v2/guide/custom-directive.ht
 - It is a **function** which has two parameters. They are `node` and `directives`
 - If **true** is returned, the operation item is **displayed**. Reverse hiding
 
-if you want to adjust the default of props, you can try setting `$ATTRIBUTES`
+If you want to adjust the default of props, you can try setting `$ATTRIBUTES`
 
 - If the value of the **default** is **Object**, using function return values, such as `() => ({ xxx: xxx })`
 
