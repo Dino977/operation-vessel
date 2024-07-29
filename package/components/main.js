@@ -77,7 +77,11 @@ export default {
 
         // Identify the icon to the right of the more button
         const moreBtnIcon = this.moreIconVisible ? (
-          <i class={`${this.moreIcon} el-icon--right`} />
+          <i
+            class={`
+              ${this.moreIcon} 
+              ${this.moreTitle ? "el-icon--right" : undefined}`}
+          />
         ) : null;
         // Determine the style of more buttons
         const moreBtn = this.$slots.moreBtn ?? (
