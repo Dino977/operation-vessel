@@ -1,10 +1,10 @@
 > A vessel for holding table operation items.
 
-It is suitable for projects that use  **Vue.js 2.0**  and **Element-UI**
+It is suitable for projects that use **Vue.js 2.0** and **Element-UI**
 
 ## Example
 
-![operation-vessel示例](https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/aafc45d3be924f4a9922191a2394c8d1~tplv-73owjymdk6-watermark.image?rk3s=f64ab15b&x-expires=1722571418&x-signature=RHPyur5LjwH5xLUAy4DK%2B5KHekg%3D)
+![operation-vessel示例.gif](https://cdn.jsdelivr.net/gh/Dino977/image-hosting@main/operation-vessel%E7%A4%BA%E4%BE%8B.gif)
 
 ## Install
 
@@ -71,14 +71,14 @@ Vue.use(OperationVessel);
 
 ## Attributes
 
-| Attribute          | Description                                                  | Type    | Accepted values                                              | Default            |
-| :----------------- | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- | :----------------- |
-| boundary           | Boundary value of the more button appears                    | number  | ≥2                                                           | 3                  |
-| moreTitle          | Name of the more button                                      | string  | —                                                            | more               |
-| moreIcon           | Name of the icon to the right of the more button             | string  | [Element-UI icons](https://element.eleme.cn/#/en-US/component/icon) | el-icon-arrow-down |
-| moreIconVisible    | Visibility of the  icon                                      | boolean | —                                                            | false              |
-| dropdownAttributes | Attributes of the [drop-down](https://element.eleme.cn/#/en-US/component/dropdown#dropdown-attributes) | object  | —                                                            | —                  |
-| dropdownMenuClass  | Name of the drop-down menu                                   | string  | —                                                            | —                  |
+| Attribute           | Description                                                                                            | Type    | Accepted values                                                     | Default            |
+| :------------------ | :----------------------------------------------------------------------------------------------------- | :------ | :------------------------------------------------------------------ | :----------------- |
+| boundary            | Boundary value of the more button appears                                                              | number  | ≥2                                                                  | 3                  |
+| more-title          | Name of the more button                                                                                | string  | —                                                                   | more               |
+| more-icon           | Name of the icon to the right of the more button                                                       | string  | [Element-UI icons](https://element.eleme.cn/#/en-US/component/icon) | el-icon-arrow-down |
+| more-icon-visible   | Visibility of the icon                                                                                 | boolean | —                                                                   | false              |
+| dropdown-attributes | Attributes of the [drop-down](https://element.eleme.cn/#/en-US/component/dropdown#dropdown-attributes) | object  | —                                                                   | —                  |
+| dropdown-menu-class | Name of the drop-down menu                                                                             | string  | —                                                                   | —                  |
 
 ## Slot
 
@@ -105,7 +105,7 @@ import OperationVessel from "operation-vessel";
 Vue.use(OperationVessel, {
   $FILTER: (node, directives) => {
     if (xxx) return false
-	
+
     return true
   },
   $ATTRIBUTES: {
