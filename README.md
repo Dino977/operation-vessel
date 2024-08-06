@@ -1,4 +1,6 @@
-<img align="center" src="https://cdn.jsdelivr.net/gh/Dino977/image-hosting@main/operation-vessel%E7%A4%BA%E4%BE%8B.gif">
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/Dino977/image-hosting@main/operation-vessel%E7%A4%BA%E4%BE%8B.gif">
+</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/operation-vessel">
