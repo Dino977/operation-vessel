@@ -1,55 +1,44 @@
+<img align="center" src="https://cdn.jsdelivr.net/gh/Dino977/image-hosting@main/operation-vessel%E7%A4%BA%E4%BE%8B.gif">
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/operation-vessel">
+  	<img src="https://img.shields.io/npm/v/operation-vessel.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/operation-vessel?minimal=true">
+  	<img src="https://img.shields.io/npm/dm/operation-vessel.svg">
+  </a>
+  <img src="https://img.shields.io/badge/License-ISC-yellow">
+  <br>
+  <a href="https://www.npmjs.com/package/vue/v/2.6.14">
+    <img src="https://img.shields.io/badge/peer-Vue%202.x-41b883">
+  </a>
+  <a href="https://www.npmjs.com/package/element-ui/v/2.15.9">
+    <img src="https://img.shields.io/badge/peer-Element--UI-20A0FF">
+  </a>
+</p>
+
+
+
 > A vessel for holding table operation items.
 
-It is suitable for projects that use **Vue.js 2.0** and **Element-UI**
+It will stay with Vue 2.x and Element-UI
 
-## Example
+## Pre-Demand
 
-![operation-vessel示例.gif](https://cdn.jsdelivr.net/gh/Dino977/image-hosting@main/operation-vessel%E7%A4%BA%E4%BE%8B.gif)
+If you use [On Demand](https://element.eleme.cn/2.14/#/en-US/component/quickstart#on-demand) for Element-UI, make sure to import the following components:
+
+- Divider
+- Link
+- Dropdown
+- DropdownMenu
+- DropdownItem
+- Icon
 
 ## Install
 
 ```bash
 npm install operation-vessel
 ```
-
-## Pre-Demand
-
-You should install [Element-UI](https://www.npmjs.com/package/element-ui) First
-
-```bash
-npm i element-ui
-```
-
-And select the following command
-
-```javascript
-/* main.js */
-// Fully import
-import Vue from 'vue'
-import Element from 'element-ui'
-import "element-ui/lib/theme-chalk/index.css";
-
-Vue.use(Element)
-
-// or On demand
-import {
-  Divider,
-  Link,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
-  Icon,
-} from 'element-ui'
-
-Vue.use(Divider)
-   .use(Link)
-   .use(Dropdown)
-   .use(DropdownMenu)
-   .use(DropdownItem)
-   .use(Icon)
-```
-
-If you chose the **On demand**，Please go to the [link🔗](https://element.eleme.cn/#/en-US/component/quickstart#on-demand) for additional actions
 
 ## Quick Start
 
