@@ -62,14 +62,15 @@ Vue.use(OperationVessel);
 
 ## Attributes
 
-| Attribute           | Description                                                                                            | Type    | Accepted values                                                     | Default            |
-| :------------------ | :----------------------------------------------------------------------------------------------------- | :------ | :------------------------------------------------------------------ | :----------------- |
-| boundary            | Boundary value of the more button appears                                                              | number  | ≥2                                                                  | 3                  |
-| more-title          | Name of the more button                                                                                | string  | —                                                                   | more               |
-| more-icon           | Name of the icon to the right of the more button                                                       | string  | [Element-UI icons](https://element.eleme.cn/#/en-US/component/icon) | el-icon-arrow-down |
-| more-icon-visible   | Visibility of the icon                                                                                 | boolean | —                                                                   | false              |
-| dropdown-attributes | Attributes of the [drop-down](https://element.eleme.cn/#/en-US/component/dropdown#dropdown-attributes) | object  | —                                                                   | —                  |
-| dropdown-menu-class | Name of the drop-down menu                                                                             | string  | —                                                                   | —                  |
+| Attribute           | Description                                                  | Type    | Accepted values                                              | Default            |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- | :----------------- |
+| boundary            | Boundary value of the more button appears                    | number  | ≥2                                                           | 3                  |
+| trigger             | how to trigger                                               | string  | hover / click                                                | hover              |
+| more-title          | Name of the more button                                      | string  | —                                                            | more               |
+| more-icon           | Name of the icon to the right of the more button             | string  | [Element-UI icons](https://element.eleme.cn/#/en-US/component/icon) | el-icon-arrow-down |
+| more-icon-visible   | Visibility of the icon                                       | boolean | —                                                            | false              |
+| dropdown-attributes | Attributes of the [drop-down](https://element.eleme.cn/#/en-US/component/dropdown#dropdown-attributes) | object  | —                                                            | —                  |
+| dropdown-menu-class | Name of the drop-down menu                                   | string  | —                                                            | —                  |
 
 ## Slot
 
