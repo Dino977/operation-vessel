@@ -5,12 +5,10 @@ module.exports = {
   mode: "production",
   entry: "./src/index.js",
   output: {
-    filename: "index.js",
+    filename: "bundle.js",
     path: path.resolve(process.cwd(), "./lib"),
     library: {
-      type: "umd",
-      name: "OPERATION",
-      umdNamedDefine: true,
+      type: "commonjs2", // 缺少此项时，针对 Vue2.x 版本，库将无法正常使用
     },
   },
   module: {
@@ -26,5 +24,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin()], // 该插件与 vue-loader 一起使用，用于解析 .vue 文件
 };

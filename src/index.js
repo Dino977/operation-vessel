@@ -22,4 +22,9 @@ const install = function (Vue, opts) {
   Vue.prototype.$OPEARATION_VESSEL_FILTER = $FILTER;
 };
 
+// Automatically register this component for direct use in the browser
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
+}
+
 export default { install };
